@@ -1,0 +1,19 @@
+{% extends 'layout' %}
+
+{% if title is defined %}
+  {% block title %}{{ title }}{% endblock title %}
+{% endif %}
+
+{% block body %}
+<h1>Your User Information</h1>
+<dl>
+{% for key, value in details %}
+<dt>{{ key }}</dt>
+<dd>{{ value }}</dd>
+{% endfor %}
+</dl>
+
+<br>
+
+<strong>Would you like to <a href="/logout/{{ provider }}">logout</a> or <a href="/">login to another provider</a>?</strong>
+{% endblock body %}

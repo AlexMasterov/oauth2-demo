@@ -1,0 +1,35 @@
+{
+  "name": "alexmasterov/oauth2-demo",
+  "description": "Demo of League OAuth2 clients",
+  "license": "MIT",
+  "require": {
+    "php": "^7.0 || ^7.1",
+    "ext-pdo": "*",
+    "ext-pdo_sqlite": "*",
+    "equip/framework": "dev-feature/action-payload as 2.0",
+    "equip/session": "dev-master#0760c76 as 1.0",
+    "zendframework/zend-diactoros": "^1.3",
+    "josegonzalez/dotenv": "^2.0",
+    "alexmasterov/equip-twig": "^2.2",
+    "alexmasterov/twig-extension": "^0",
+    "alexmasterov/oauth2-hh": "^0",
+    "alexmasterov/oauth2-superjob": "^0"
+  },
+  "autoload": {
+    "psr-4": {
+      "OAuth2\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "OAuth2\\Tests\\": "tests/"
+    }
+  },
+  "repositories": [{
+    "type": "vcs",
+    "url": "https://github.com/AlexMasterov/framework"
+  }],
+  "scripts": {
+    "serve": "php -S 0.0.0.0:8080 -t public/"
+  }
+}

@@ -1,0 +1,15 @@
+{% extends 'layout' %}
+
+{% if title is defined %}
+  {% block title %}{{ title }}{% endblock title %}
+{% endif %}
+
+{% block body %}
+{% if message %}
+  {{ message }}
+<br>
+<br>
+{% endif %}
+
+→ <a href="/">Go to start page</a>
+{% endblock body %}

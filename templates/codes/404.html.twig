@@ -1,0 +1,14 @@
+{% extends 'layout' %}
+
+{% if title is defined %}
+  {% block title %}{{ title }}{% endblock title %}
+{% endif %}
+
+{% block body %}
+The page <strong>{{ absolute_url() }}</strong> does not exist.
+
+<br>
+<br>
+
+→ <a href="/">Go to start page</a>
+{% endblock body %}

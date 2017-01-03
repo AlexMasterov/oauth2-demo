@@ -1,0 +1,19 @@
+{% extends 'layout' %}
+
+{% if title is defined %}
+  {% block title %}{{ title }}{% endblock title %}
+{% endif %}
+
+{% block body %}
+<h3>Login With:</h3>
+<ul>
+{% for provider, connected in providers %}
+  <li>
+    <a href="/connect/{{ provider }}">{{ provider }}</a>
+    {% if connected %}
+      <small><a href="/user/{{ provider }}">info</a></small>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% endblock body %}
